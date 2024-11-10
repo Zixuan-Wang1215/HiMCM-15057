@@ -1,29 +1,21 @@
-# Modify the previous code to adjust point sizes (five times smaller)
 import pandas as pd
 import plotly.express as px
 
-# Load the Excel data
 file_path = 'task1/TOP500_202406.xlsx'
 data = pd.read_excel(file_path, sheet_name='63')
 
-# Select the desired columns
 site_data = data[['Rank', 'Name', 'Site', 'Country', 'Computer', 'Year', 'Total Cores', 'Rmax [TFlop/s]', 'Rpeak [TFlop/s]']].head(500)
 
-# Load the coordinates data
 df = pd.read_csv('task1/coordinate.csv')
 
-# Add latitude and longitude to site_data
 site_data['Latitude'] = df['Lat']
 site_data['Longitude'] = df['Lon']
 
-# Save the updated data to a new CSV file
 output_path = 'task1/coordinate1.csv'
 site_data.to_csv(output_path, index=False)
 
-# Filter out rows without coordinates
 site_data_filtered = site_data.dropna(subset=['Latitude', 'Longitude'])
 
-# Add a new column for color category based on the value of 'Rmax [TFlop/s]'
 def assign_color_category(rmax):
     if rmax < 5030:
         return 'Low (<5030 Rmax [TFlop/s])'
@@ -34,24 +26,22 @@ def assign_color_category(rmax):
 
 site_data_filtered['HPC Category'] = site_data_filtered['Rmax [TFlop/s]'].apply(assign_color_category)
 
-# Add a new column for size based on Rmax category (reduced sizes)
 def assign_marker_size(rmax_category):
     if rmax_category == 'Low (<5030 Rmax [TFlop/s])':
-        return 1  # Reduced from 5 to 1
+        return 1
     elif rmax_category == 'Medium (5030-10060 Rmax [TFlop/s])':
-        return 2  # Reduced from 10 to 2
+        return 2
     else:
-        return 3  # Reduced from 15 to 3
+        return 3
 
 site_data_filtered['Marker Size'] = site_data_filtered['HPC Category'].apply(assign_marker_size)
 
-# Create the scatter plot
 fig = px.scatter_geo(site_data_filtered,
                      lat='Latitude',
                      lon='Longitude',
                      title='Geographic Distribution of Top 500 High Performance Computers',
                      projection='natural earth',
-                     color='HPC Category',  
+                     color='HPC Category',
                      hover_name='Name',
                      hover_data=['Rank', 'Rmax [TFlop/s]', 'Country'],
                      color_discrete_map={
@@ -59,9 +49,7 @@ fig = px.scatter_geo(site_data_filtered,
                          'Medium (5030-10060 Rmax [TFlop/s])': 'yellow',
                          'High (>10060 Rmax [TFlop/s])': 'green'
                      },
-                     size='Marker Size',  # Set size based on the Marker Size column
-                     size_max=15)  # Set maximum size to 3 for better visibility
-
-# Save the plot as an image
+                     size='Marker Size',
+                     size_max=15)
 
 fig.write_image("task1/geographic_distribution.png", width=1920, height=1080, scale=2)
