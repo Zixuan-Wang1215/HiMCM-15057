@@ -30,16 +30,6 @@ newcsv=pd.DataFrame({
     'Electricity from wind - TWh':csv2['Electricity from wind - TWh'],
     'Wind Percentage':list(csv2['Electricity from wind - TWh']/csv1['Total Energy']),
 
-    
-
-    
-
-    
-
-    
-
-    
-
 })
 
 newcsv.to_csv('task2/energy1.csv', index=False)

@@ -1,0 +1,195 @@
+Name,Country,Rmax [TFlop/s],Total_Power (kW),Average_Power(kW)
+Frontier,United States,1206000.0,22786.0,15950.199999999999
+Aurora,United States,1012000.0,38698.36,27088.852
+Supercomputer Fugaku,Japan,442010.0,29899.23,20929.461
+LUMI,Finland,379700.0,7106.82,4974.773999999999
+Alps,Switzerland,270000.0,5194.0,3635.7999999999997
+Leonardo,Italy,241200.0,7493.74,5245.6179999999995
+MareNostrum 5 ACC,Spain,175300.0,4158.9,2911.2299999999996
+Summit,United States,148600.0,10096.0,7067.2
+Venado,United States,98510.0,1661.57,1163.099
+Sierra,United States,94640.0,7438.28,5206.795999999999
+Sunway TaihuLight,China,93014.59388,15371.0,10759.699999999999
+Perlmutter,United States,79230.0,2945.0,2061.5
+Selene,United States,63460.0,2646.0,1852.1999999999998
+Tianhe-2A,China,61444.5,18482.0,12937.4
+CEA-HE,France,57110.0,1207.0,844.9
+ISEG,Netherlands,46540.0,1320.0,923.9999999999999
+Adastra,France,46100.0,921.48,645.036
+JUWELS Booster Module,Germany,44120.0,1764.22,1234.954
+MareNostrum 5 GPP,Spain,40101.8,5752.9,4027.0299999999993
+Shaheen III - CPU,Saudi Arabia,35658.3,5301.0,3710.7
+HPC5,Italy,35450.0,2252.17,1576.519
+Crossroads,United States,30034.7,6283.91,4398.736999999999
+Setonix – GPU,Australia,27160.0,476.63,333.64099999999996
+Discovery 5,United States,26130.0,964.0,674.8
+TSUBAME4.0,Japan,25460.0,732.06,512.4419999999999
+CEA-HF,France,23237.6,4959.47,3471.629
+ABCI 2.0,Japan,22208.72,1600.32,1120.224
+Wisteria/BDEC-01 (Odyssey),Japan,22121.0,1468.0,1027.6
+Piz Daint,Switzerland,21230.0,2384.24,1668.9679999999998
+Trinity,United States,20158.7,7578.1,5304.67
+Hawk,Germany,19334.0,3905.83,2734.0809999999997
+Frontier TDS,United States,19200.0,308.68,216.076
+Helios GPU,Poland,19140.0,316.88,221.81599999999997
+Pégaso,Brazil,19070.0,1033.0,723.0999999999999
+Guru,South Korea,18002.8,3296.0,2307.2
+Maru,South Korea,18002.8,3296.0,2307.2
+PANGEA III,France,17860.0,1367.0,956.9
+AOBA-S,Japan,17221.0,1388.81,972.1669999999999
+HiPerGator AI,United States,17200.0,582.63,407.84099999999995
+SuperMUC-NG Phase 2,Germany,17190.5,725.9,508.12999999999994
+preAlps,Switzerland,15470.0,240.29,168.20299999999997
+Cori,United States,14014.7,3939.0,2757.2999999999997
+,Japan,13367.0,904.72,633.304
+,Japan,13367.0,904.72,633.304
+HPC4,Italy,12210.0,1320.0,923.9999999999999
+Tera-1000-2,France,11965.5,3178.0,2224.6
+Carpenter,United States,11616.8,1100.0,770.0
+,Taiwan,11164.0,673.56,471.4919999999999
+MeluXina - Accelerator Module,Luxembourg,10520.0,390.25,273.17499999999995
+Earth Simulator -SX-Aurora TSUBASA,Japan,9990.7,1390.95,834.57
+,Germany,9357.4,1212.51,727.506
+JURECA Data Centric Module,Germany,9330.0,384.1,230.46
+Goethe-NHR,Germany,9087.0,195.24,117.144
+Aitken,United States,9070.0,2010.1,1206.06
+Taiwania 2,Taiwan,9000.0,797.54,478.52399999999994
+SNL CTS-2 Stout,United States,8987.13,1491.14,894.6840000000001
+Dragão,Brazil,8983.0,943.12,565.872
+Raven-GPU,Germany,8620.0,377.0,226.2
+AiMOS,United States,8339.0,512.08,307.248
+Dardel GPU,Sweden,8259.0,146.2,87.71999999999998
+Taranis,France,8191.03,1672.0,1003.1999999999999
+LANTA,Thailand,8146.0,310.46,186.27599999999998
+HoreKa-Green,Germany,8025.6,358.79,215.274
+42,Germany,7938.0,352.8,211.68
+Plasma Simulator,Japan,7892.7,1550.1,930.06
+Leonardo-CPU,Italy,7841.57,1118.37,671.0219999999999
+Underhill,Canada,7764.57,1294.72,776.832
+Robert,Canada,7764.57,1294.72,776.832
+Belenos,France,7683.36,1655.0,993.0
+Isambard-AI phase 1,United Kingdom,7417.0,117.08,70.24799999999999
+Artemis,United Arab Emirates,7257.0,673.0,403.8
+JOLIOT-CURIE ROME,France,6988.04,1436.0,861.6
+Gaia,Brazil,6968.0,574.0,344.4
+"Karolina, GPU partition",Czechia,6752.0,310.99,186.594
+,Germany,6726.9,941.56,564.9359999999999
+Camphor 3,Japan,6708.13,1026.64,615.984
+HPCF-AD,Italy,6671.94,1200.0,720.0
+HPCF-AC,Italy,6671.94,1200.0,720.0
+HPCF-AB,Italy,6671.94,1200.0,720.0
+HPCF-AA,Italy,6671.94,1200.0,720.0
+MareNostrum,Spain,6470.8,1632.0,979.1999999999999
+SPR-HBM,United States,6463.85,1062.0,637.1999999999999
+LUMI-C,Finland,6299.79,1215.53,729.318
+JUWELS Module 1,Germany,6177.73,1361.0,816.6
+SQUID - CPU Nodes,Japan,6105.1,1222.2,733.32
+Pleiades,United States,5951.55,4407.0,2644.2
+Narval (GPU),Canada,5886.0,311.14,186.684
+Sawtooth,United States,5780.62,1432.0,859.1999999999999
+COBRA,Germany,5612.83,1635.0,981.0
+,Taiwan,5600.6,350.47,210.282
+Shaheen II,Saudi Arabia,5536.99,2834.0,1700.3999999999999
+Grete,Germany,5458.0,205.62,123.372
+Electra,United States,5444.64,1685.73,1011.438
+Snellius Phase 2 CPU,Netherlands,5404.2,799.0,479.4
+MAHTI,Finland,5388.52,1070.0,642.0
+Pangea,France,5283.11,4150.0,2490.0
+"DiRAC, Tursa",United Kingdom,5228.0,243.95,146.36999999999998
+TX-GAIA (Green AI Accelerator),United States,5161.0,1436.0,861.6
+Dhabi Supercomputer,United Arab Emirates,5094.0,138.94,83.36399999999999
+Athena,Poland,5051.0,146.56,87.93599999999999
+Cheyenne,United States,4788.19,1727.0,863.5
+Derecho GPU partition,United States,4582.0,169.03,84.515
+JEDI,Germany,4504.0,67.31,33.655
+Wisteria/BDEC-01 (Aquarius),Japan,4425.0,183.93,91.965
+Atlas,Brazil,4376.0,546.58,273.29
+Advanced Computing System(PreE),China,4325.0,380.0,190.0
+CRONOS,France,4299.33,1225.53,612.765
+SNL/NNSA CTS-1 Manzano,United States,4281.0,960.0,480.0
+Noctua 2,Germany,4190.9,868.74,434.37
+JOLIOT-CURIE SKL,France,4065.55,917.0,458.5
+Abel,United States,4042.46,1800.0,900.0
+Alex,Germany,4030.0,178.97,89.485
+Deucalion,Portugal,3955.5,365.21,182.605
+,United Kingdom,3944.68,1897.02,948.51
+,United Kingdom,3944.68,1897.02,948.51
+Gemini,Brazil,3861.0,287.0,143.5
+CLAIX-2023 (GPU segment),Germany,3771.0,155.76,77.88
+Pratyush,India,3763.94,1353.23,676.615
+Snellius Phase 1 GPU,Netherlands,3603.0,205.35,102.675
+Niagara,Canada,3599.65999,919.42,459.71
+Fritz,Germany,3578.03,671.97,335.985
+,United States,3577.0,1498.9,749.45
+,United States,3577.0,1498.9,749.45
+Anvil,United States,3563.1,792.0,396.0
+Altair,Poland,3533.61,829.0,414.5
+Forerunner 1,Taiwan,3532.92,614.87,307.435
+ATOS THX.A.B,France,3505.0,86.06,43.03
+Pegasus,Japan,3478.0,67.87,33.935
+Cedar (GPU),Canada,3371.0,310.0,155.0
+Topaz,United States,3318.95,5175.0,2587.5
+,United States,3307.0,349.5,174.75
+Damson,United Kingdom,3243.41,1134.0,567.0
+LLNL/NNSA CTS-1 MAGMA,United States,3241.24,887.0,443.5
+HPC2,Italy,3188.0,1227.0,613.5
+Fênix,Brazil,3161.0,389.76,194.88
+Lichtenberg II (Phase 1),Germany,3148.38,690.0,345.0
+,United States,3143.52,6327.55,3163.775
+CLAIX-2023 (CPU segment),Germany,3133.42,676.45,338.225
+Thunder,United States,3126.24,4819.5,2409.75
+HoreKa-Teal,Germany,3123.0,49.6,24.8
+Komondor,Hungary,3105.0,110.24,55.12
+Alps,Switzerland,3088.6,637.95,318.975
+Helios CPU,Poland,3086.4,453.8,226.9
+Numerical Materials Simulator,Japan,3082.12,691.2,345.6
+Camphor 2,Japan,3057.35,748.1,374.05
+Barnard,Germany,3047.36,535.7,267.85
+Mistral,Germany,3010.68,1116.0,558.0
+Henri,United States,2882.0,44.07,22.035
+"Karolina, CPU partition",Czechia,2837.4,502.7,251.35
+SuperMUC Phase 2,Germany,2813.62,1480.83,740.415
+,United Kingdom,2801.782,1347.84,673.92
+,United Kingdom,2801.782,1347.84,673.92
+JFRS-1,Japan,2787.14,697.51,348.755
+SNL/NNSA CTS-1 Attaway,United States,2724.52,750.0,375.0
+LLNL/NNSA CTS-1 Jade,United States,2632.51,13620.0,6810.0
+LLNL CTS-1 Quartz,United States,2632.51,13620.0,6810.0
+Cedar (CPU),Canada,2607.98,792.0,396.0
+AlphaCentauri,Germany,2592.0,163.65,81.825
+Conesus,United States,2589.48,409.25,204.625
+Mihir,India,2570.4,954.73,477.365
+Spartan2,France,2566.0,105.76,52.88
+,Japan,2547.81,438.03,219.015
+,Japan,2547.81,438.03,219.015
+PAI-BSystem,China,2547.0,710.0,355.0
+cascade,United States,2539.13,1384.0,692.0
+occigen2,France,2494.65,1430.0,715.0
+Excalibur,United States,2485.0,1465.78,732.89
+CLAIX (2018),Germany,2483.58,692.05,346.025
+Centennial,United States,2443.7,835.0,417.5
+Greene-H100,United States,2436.0,51.69,25.845
+PAI-ASystem,China,2435.0,740.0,370.0
+Cannon2-A100,United States,2384.0,87.32,43.66
+NVIDIA DGX SuperPOD,United States,2356.0,89.94,44.97
+Ares,Poland,2338.79,486.85,243.425
+HoreKa-Blue,Germany,2333.51,494.51,247.255
+Makman-3,Saudi Arabia,2322.46,608.0,304.0
+Champollion,France,2321.0,60.2,30.1
+VSC-5,Austria,2312.3,516.0,258.0
+Taiwania 3,Taiwan,2297.56,563.85,281.925
+Wilkes-3,United Kingdom,2287.0,74.26,37.13
+MeluXina - Cluster Module,Luxembourg,2286.56,377.21,188.605
+Béluga,Canada,2278.0,240.0,120.0
+SSC-21 Scalable Module,South Korea,2274.1,103.01,51.505
+Cumulus,United Kingdom,2271.38,530.0,265.0
+Tethys,United States,2255.0,71.5,35.75
+Makman-2,Saudi Arabia,2249.68,1134.0,567.0
+,China,2192.0,740.0,370.0
+MN-3,Japan,2179.6,53.29,26.645
+Marvin (Scalable GPU Partition),Germany,2177.0,90.74,45.37
+Rockfish,United States,2175.0,450.0,225.0
+,China,2152.0,1625.0,812.5
+Lise GPU-X,Germany,2146.0,133.23,66.615
+Phoenix - 2022,Australia,2134.0,68.71,34.355
+HSUper,Germany,2129.92,394.7,197.35
