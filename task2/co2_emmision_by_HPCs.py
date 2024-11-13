@@ -18,7 +18,7 @@ percent={'Bio':energy['Bioenergy Percentage'],
          'Wind':energy['Wind Percentage']
          }
 countryenergy=list(energy['Country'])
-
+print(countryenergy)
 
 
 totalemission=pd.DataFrame({
