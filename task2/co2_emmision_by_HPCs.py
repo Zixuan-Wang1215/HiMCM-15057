@@ -18,7 +18,6 @@ percent={'Bio':energy['Bioenergy Percentage'],
          'Wind':energy['Wind Percentage']
          }
 countryenergy=list(energy['Country'])
-print(countryenergy)
 
 
 totalemission=pd.DataFrame({
@@ -47,7 +46,7 @@ totalemission['Total (gCO2/h)'] = totalemission[
     ]
 ].sum(axis=1)
 
-
+print(totalemission['Total (gCO2/h)'].mean())
 totalemission.to_csv(outpath_max,index=False)
 
 
