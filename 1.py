@@ -1,26 +1,49 @@
-import gensim.downloader as api
-import matplotlib.pyplot as plt
-from sklearn.manifold import TSNE
-import numpy as np
+import sympy as sp
 
-# Load the model
-model = api.load("glove-wiki-gigaword-50")
+# Define the variable t
+t = sp.symbols('t')
 
-# Select a subset of words for visualization
-words = ['tower', 'building', 'height', 'city', 'architecture', 'skyline', 'structure', 'urban', 'office', 'apartment']
-vectors = np.array([model[word] for word in words])
+# Define E(t) as an explicit function of t
+E = 42.51 * t - 84086.35
 
-# Reduce dimensionality with t-SNE
-tsne = TSNE(n_components=2, random_state=0, perplexity=5)
-vectors_2d = tsne.fit_transform(vectors)
+# Define each P function of t
+P_bio = 0.0005193564761916456 * t - 1.0249323789041274
+P_solar = 0.006999473791285229 * t - 14.1028007372921
+P_wind = 0.006964098717905855 * t - 13.99992881017315
+P_hydro = -0.003909503377416621 * t + 8.04600316410604
+P_nuclear = -0.0030414127561043908 * t + 6.2557114713864
+P_coal = -0.004435620565799054 * t + 9.354244635986639
+P_gas = -0.002487251921876305 * t + 5.219182283584952
+P_oil = -0.0005529829731568147 * t + 1.1372845209044042
 
-# Plotting
-plt.figure(figsize=(12, 8))
-plt.scatter(vectors_2d[:, 0], vectors_2d[:, 1], s=100, color='blue')
+# Define constants k values symbolically
+k_bio, k_solar, k_wind, k_hydro, k_nuclear, k_coal, k_gas, k_oil = sp.symbols('k_bio k_solar k_wind k_hydro k_nuclear k_coal k_gas k_oil')
 
-# Annotate points
-for i, word in enumerate(words):
-    plt.annotate(word, xy=(vectors_2d[i, 0], vectors_2d[i, 1]), fontsize=12)
+# Define the expression for C(t)
+C_t = E * (P_bio * k_bio + P_solar * k_solar + P_wind * k_wind + 
+           P_hydro * k_hydro + P_nuclear * k_nuclear + 
+           P_coal * k_coal + P_gas * k_gas + P_oil * k_oil)
 
-plt.title("t-SNE visualization of GloVe embeddings")
-plt.show()
+# Differentiate C(t) with respect to t
+C_t_derivative = sp.diff(C_t, t)
+
+# Substitute the provided values for k constants
+k_values = {
+    k_bio: 230,
+    k_coal: 820,
+    k_gas: 490,
+    k_hydro: 24,
+    k_nuclear: 12,
+    k_oil: 600,
+    k_solar: 48,
+    k_wind: 11.5
+}
+
+# Substitute the k values into the derivative expression
+C_t_prime_with_k_values = C_t_derivative.subs(k_values)
+
+# Solve for t where C'(t) = 0
+t_solution = sp.solve(C_t_prime_with_k_values, t)
+
+# Display the solution(s)
+print(t_solution)
