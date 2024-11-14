@@ -2,64 +2,51 @@ import sympy as sp
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Define the constants
-k_values = {
-    'k_bio': 230,
-    'k_solar': 48,
-    'k_wind': 11.5,
-    'k_hydro': 24,
-    'k_nuclear': 12,
-    'k_coal': 820,
-    'k_gas': 490,
-    'k_oil': 600
-}
+# Define the variable t
+t = sp.symbols('t')
 
-# Define E(t) and each P function in terms of numpy
-def E(t):
-    return 42.51 * t - 84086.35
+# Define variables and constants
+a = 0.02224047547  # variable
+y = [0, 0.020188178122662336, 0.1225081883, 0.078741188055, -0.0285203182168, -0.0295473656974, -0.011642530584, -0.0132673499159, -0.029730321387]  # variable
+P0s = [0, 2.57257724315717 / 100, 5.71347424779 / 100, 8.84428961504 / 100, 13.7077831592 / 100, 10.2933465787 / 100, 38.0984231375 / 100, 18.7471645629 / 100, 1.85999662082 / 100]  # constant
+k = [0, 230, 48, 11.5, 24, 12, 820, 490, 600]  # constant
 
-def P_bio(t):
-    return 0.0005193564761916456 *100* t - 1.024932378904127*100
+# Define E(t) as an explicit function of t
+E = 1911.38 * (1 + a * t)
 
-def P_solar(t):
-    return 0.006999473791285229*100 * t - 14.1028007372921*100
+# Define each P_i(t) based on the given formula
+P = [0] + [P0s[i] * (1 + y[i] * t) for i in range(1, 9)]
 
-def P_wind(t):
-    return 0.006964098717905855 *100* t - 13.99992881017315*100
+# Normalize P to make the sum equal to 1
+P_sum = sum(P)
+P = [p_i / P_sum for p_i in P]
 
-def P_hydro(t):
-    return -0.003909503377416621 *100* t + 8.04600316410604*100
+# Define C(t) as per the summation form
+C_t = E * (P[1] * k[1] + P[2] * k[2] + P[3] * k[3] + P[4] * k[4] +
+           P[5] * k[5] + P[6] * k[6] + P[7] * k[7] + P[8] * k[8])
 
-def P_nuclear(t):
-    return -0.0030414127561043908*100 * t + 6.2557114713864*100
+# Convert C_t to a numerical function
+C_t_func = sp.lambdify(t, C_t, 'numpy')
 
-def P_coal(t):
-    return -0.004435620565799054*100* t + 9.354244635986639*100
+# Define the range of t values
+t_values = np.linspace(0, 40, 100)  # Adjust the range as needed
+C_t_values = C_t_func(t_values)
 
-def P_gas(t):
-    return -0.002487251921876305*100 * t + 5.219182283584952*100
 
-def P_oil(t):
-    return -0.0005529829731568147 *100* t + 1.1372845209044042*100
-
-# Define C(t) based on the values of k
-def C(t):
-    return E(t) * (P_bio(t)/100 * k_values['k_bio'] + P_solar(t)/100 * k_values['k_solar'] + 
-                   P_wind(t)/100 * k_values['k_wind'] + P_hydro(t)/100 * k_values['k_hydro'] + 
-                   P_nuclear(t)/100 * k_values['k_nuclear'] + P_coal(t)/100 * k_values['k_coal'] + 
-                   P_gas(t)/100 * k_values['k_gas'] + P_oil(t)/100 * k_values['k_oil'])
-
-# Generate t values for plotting from 2018 to 2060
-t_values = np.linspace(2018, 2060, 500)
-C_values = C(t_values)
-
-# Plot C(t) with the specified range
+# Plot C(t)
 plt.figure(figsize=(10, 6))
-plt.plot(t_values, C_values, label="C(t)", color="blue")
-plt.xlabel("Year")
-plt.ylabel("C(t) gCO/h")
-plt.title("Plot of C(t) from 2018 to 2060")
+plt.plot(t_values, C_t_values, label="C(t)", color='b')
+plt.xlabel("t")
+plt.ylabel("C(t) gCO2/h")
+plt.title("Prediction of Average CO2 Emissions per Hour Over Time")
 plt.legend()
-plt.grid(True)
-plt.show()
+plt.grid(False)
 
+# Adjust x-axis labels to show t + 2023
+ax = plt.gca()
+ax.set_xticklabels([int(label) + 2023 for label in ax.get_xticks()])
+
+# Save the plot to the /predictions directory
+plt.savefig('task3/3a/predictions/ct_plot.png')
+
+plt.show()

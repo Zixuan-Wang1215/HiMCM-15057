@@ -1,7 +1,6 @@
 import pandas as pd
 import plotly.express as px
 
-
 file_path = 'task1/TOP500_202406.xlsx'
 data = pd.read_excel(file_path, sheet_name='63')
 
@@ -34,21 +33,23 @@ def assign_marker_size(rmax_category):
 
 site_data_filtered['Marker Size'] = site_data_filtered['HPC Category'].apply(assign_marker_size)
 
-fig = px.scatter_geo(site_data_filtered,
-                     lat='Latitude',
-                     lon='Longitude',
-                     title='Geographic Distribution of Top 500 High Performance Computers',
-                     projection='natural earth',
-                     color='HPC Category',
-                     hover_name='Name',
-                     hover_data=['Site','Rank', 'Rmax [TFlop/s]', 'Country'],
-                     color_discrete_map={
-                         'Low (<5030 Rmax [TFlop/s])': 'red',
-                         'Medium (5030-10060 Rmax [TFlop/s])': 'yellow',
-                         'High (>10060 Rmax [TFlop/s])': 'green'
-                     },
-                     size='Marker Size',
-                     size_max=15)
+fig = px.scatter_geo(
+    site_data_filtered,
+    lat='Latitude',
+    lon='Longitude',
+    title='Geographic Distribution of Top 500 High Performance Computers',
+    projection='natural earth',
+    color='HPC Category',
+    hover_name='Name',
+    hover_data=['Site', 'Rank', 'Rmax [TFlop/s]', 'Country'],
+    color_discrete_map={
+        'Low (<5030 Rmax [TFlop/s])': 'red',
+        'Medium (5030-10060 Rmax [TFlop/s])': 'yellow',
+        'High (>10060 Rmax [TFlop/s])': 'green'
+    },
+    size='Marker Size',
+    size_max=15
+)
 
 fig.write_image("task1/geographic_distribution.png", width=1920, height=1080, scale=2)
 fig.show()
