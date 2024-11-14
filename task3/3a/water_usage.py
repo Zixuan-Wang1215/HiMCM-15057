@@ -13,7 +13,7 @@ P0s = [0, 2.57257724315717 / 100, 5.71347424779 / 100, 8.84428961504 / 100, 13.7
 k= [0, 537.234, 1.126 , 0.279, 69.93, 2.103, 2.325, 0.847, 3.19]  # constant
 
 # Define E(t) as an explicit function of t
-E = 1911.38 * (1 +  a * t)
+E = 1911.38 * (1 + a * t)
 
 # Define each P_i(t) based on the given formula
 P = [0] + [P0s[i] * (1 + y[i] * t) for i in range(1, 9)]
